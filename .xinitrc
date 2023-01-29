@@ -1,1 +1,1 @@
-exec wrappedhl
+exec i3
