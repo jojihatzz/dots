@@ -1,4 +1,7 @@
 # linux-config
+
+![https://raw.githubusercontent.com/jojihatzz/dot-files/main/preview.png]()
+
 Linux Configs
 ## Install packages
 
