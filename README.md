@@ -6,7 +6,7 @@ Linux Configs
 ## Install packages
 
 ```bash
-pacman -S htop git firefox pcmanfm lxappearance unzip zip rofi polybar kitty mlocate neofetch ranger xorg-server xorg-xinit picom nvidia nvidia-settings plasma-desktop kscreen alacritty dolphin
+pacman -S htop git firefox pcmanfm lxappearance unzip zip rofi polybar kitty mlocate neofetch ranger xorg-server xorg-xinit picom nvidia nvidia-settings plasma-desktop kscreen alacritty dolphin kdeconnect ark
 ```
 ## Install yay
 ```bash
