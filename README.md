@@ -6,7 +6,7 @@ Linux Configs
 ## Install packages
 
 ```bash
-pacman -S htop git firefox pcmanfm lxappearance unzip zip rofi polybar kitty mlocate neofetch ranger xorg-server xorg-xinit picom nvidia nvidia-settings plasma-desktop plasma-pa kscreen alacritty dolphin kdeconnect ark
+pacman -S htop git firefox pcmanfm lxappearance unzip zip rofi polybar kitty mlocate neofetch ranger xorg-server xorg-xinit picom nvidia nvidia-settings plasma-desktop plasma-pa kscreen alacritty dolphin kdeconnect ark starship celluloid
 ```
 ## Install yay
 ```bash
@@ -18,7 +18,7 @@ makepkg -si
 # Install yay packages
 
 ```bash
-yay -S ly betterdiscord-installer
+yay -S ly betterdiscord-installer spotify
 ```
 
 
