@@ -1,0 +1,14 @@
+[$Version]
+update_info=ksmserver_update_loginMode_value.upd:ksmserver_update_loginMode_value_default_enum
+
+[LegacySession: saved at previous logout]
+count=0
+
+[Session: saved at previous logout]
+clientId1=10ffd0dccc000167517772400000006690015
+count=1
+discardCommand1[$e]=rm,$HOME/.config/session/dolphin_10ffd0dccc000167517772400000006690015_1675182340_883460
+program1=/sbin/dolphin
+restartCommand1=/sbin/dolphin,-session,10ffd0dccc000167517772400000006690015_1675182340_883460
+restartStyleHint1=0
+userId1=joji

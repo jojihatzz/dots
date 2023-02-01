@@ -1,0 +1,6 @@
+[General]
+FreeFloating=true
+RetainPriorSearch=false
+
+[PlasmaRunnerManager]
+migrated=true
