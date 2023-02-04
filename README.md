@@ -1,9 +1,10 @@
-> [[_HOME 🏠]]
-
 </br></br>
 
 # Install Arch ($ archinstall)
 
+</br></br>
+
+---
 ## Verify Connectivity to the Internet
 
 First of all, check the internet connection. To check internet connectivity, ping a website, as shown in the example below.
@@ -15,19 +16,19 @@ ping -c 3 archlinux.org
 
 If you use a wired connection, it is usually picked up automatically. However, if you receive an error message, please check your internet connection or router.
 
-## Install time
-
-U can do it manually but `archinstall` is a thing so...
-
-### Install using archinstall
+---
+## Install using archinstall
 
 Once the boot is complete, you should see a prompt like the below. Type `archinstall` and hit enter.
 
 ![First prompt for archinstall](https://www.debugpoint.com/wp-content/uploads/2022/01/image.png)
 
 
-choose your options and once you are done type reboot.
+choose your options and once you are done type exit & reboot.
 
+</br></br>
+
+---
 ## Post install
 
 1. Install DE
@@ -35,6 +36,9 @@ choose your options and once you are done type reboot.
 3. Customize desktop
 4. Configure apps
 
+</br></br>
+
+---
 ### Install DE
 
 - KDE
@@ -48,7 +52,9 @@ Personally i like KDE
 sudo pacman -S plasma-desktop kdeconnect plasma-pa kscreen
 ```
 
+</br></br>
 
+---
 ### Install Packages (pacman)
 
 - htop
@@ -60,6 +66,7 @@ sudo pacman -S plasma-desktop kdeconnect plasma-pa kscreen
 - xorg-server & xorg-xinit
 - nvidia & nvidia-settings
 - ark
+- kcalc
 - starship
 - dolphin
 - celluloid
@@ -69,6 +76,9 @@ sudo pacman -S plasma-desktop kdeconnect plasma-pa kscreen
 - neovim
 - keepass
 
+</br></br>
+
+---
 ### Install Packages (yay)
 
 Install yay
@@ -90,12 +100,15 @@ yay packages
 - github-desktop-bin
 - ly
 
+</br></br>
+
 
 > [!info] .Appimage
 > If you install .AppImage app extract it with `./Appname --appimage-extract` a directory will be created called `squashfs-root` in the directory where the AppImage was extracted. Enter the directory `squashfs-root` and copy the desktop launcher to /usr/share/applications/ then edit the desktop launcher to point to the path of the AppImage, i.e., `Exec=$HOME/.local/bin/inkscape.AppImage`. Remove the directory `squashfs-root`.move them to home/.local/bin and make a .desktop file.
 
+</br></br>
 
-
+---
 ## Configure xinitrc & ly
 
 ![](https://user-images.githubusercontent.com/5473047/88958888-65efbf80-d2a1-11ea-8ae5-3f263bce9cce.png)
@@ -156,13 +169,66 @@ Once the compilation is complete, run the command below to enable ly
 
 `systemctl enable ly.service`
 
+</br></br>
+
+
 #### Configuration
 
 You can find all the configuration in `/etc/ly/config.ini`. The file is commented, and includes the default values.
 
 Now reboot
 
+</br></br>
+
+---
 ### Post install pt.2
+
+- Install [BetterDiscord](https://betterdiscord.app/) - appimage
+- Install [Spicetify](https://spicetify.app/docs/getting-started) - terminal
+- Install [packer.nvim](https://github.com/wbthomason/packer.nvim) - yay
+- Desktop Theming
+
+### Neovim Configuration
+
+![](https://i.imgur.com/BmilYtB.png)
+
+
+
+Clone the repo
+
+```bash
+git clone https://github.com/jojihatzz/nvim-config
+```
+
+copy the contents of the folder to `/home/$USER/.config/nvim/`
+
+Comment out the colorscheme file in the init.lua file and run :Packersync
+
+```lua
+----------------------------
+require("user.options")
+require("user.keymaps")
+--require("user.colorschemes")
+require("user.plugins")
+
+
+-- Plugins
+require("user.lsp.lsp_config")
+require("user.lsp.mason_config")
+require("user.telescope")
+require("user.noice")
+require("user.notify")
+require("user.dashboard")
+require("user.lualine")
+require("user.toggleterm")
+require("user.nvim-tree")
+require("user.treesitter")
+require("user.cmp")
+```
+
+close neovim and run again :Packersync.
+
+Uncomment colorscheme file
 
 
 </br></br>
