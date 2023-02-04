@@ -4,6 +4,8 @@
 
 </br></br>
 
+![](https://raw.githubusercontent.com/jojihatzz/dots/main/preview.jpg)
+
 ---
 ## Verify Connectivity to the Internet
 
